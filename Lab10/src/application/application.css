@@ -1,0 +1,16 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: Impact, Charcoal, sans-serif;
+    -fx-background-color: #e0e0e0;
+}
+.tableViewID{
+	-fx-padding: 10px;
+    -fx-background-color:#e0e0e0;
+}
+.header-section{
+	-fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-background-color:#00437A;
+    -fx-text-fill: #000000;
+}

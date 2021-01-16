@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProdajaController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="144.0" text="Artikl:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="95.0" text="Korisnik:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="131.0" text="Datum unos:" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="datePickerId" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="artiklComboId" prefWidth="150.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="korisnikComboId" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="buttonPretraziId" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pretragaProdaje" text="Pretraži" />
+         </children></VBox>
+   </center>
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="Pretraživanje prodaje" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <TableView fx:id="tableViewId" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="oglasColId" prefWidth="75.0" text="Oglas" />
+          <TableColumn fx:id="korisnikColId" prefWidth="75.0" text="Korisnik" />
+            <TableColumn fx:id="datumColId" prefWidth="75.0" text="Datum" />
+        </columns>
+      </TableView>
+   </bottom>
+</BorderPane>
